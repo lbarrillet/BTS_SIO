@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style_ap.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
+
+    <title>Lyssandre Barrillet portefolio</title>
+
+  </head>
+
+  
+  <body>
+
+
+    <nav>
+         
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+    
+          <li><a href="index.html">Entreprise</a></li>
+          <li><a href="index.html">Projets</a></li>
+          <li><a href="index.html">Veille technologique</a></li>
+        </ul>
+      </nav>
+
+
+      <section id="2">
+      </br>  
+        <h1>Configuration systèmes</h1>
+        <div class="backgroundent">
+        <img src="image/backgroundsys.jpg" height="400px" />
+    </div>
+        
+        
+        </section>
+
+      <section class="page-section bg-light" id="team">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Contexte</h2>
+                <h3 class="section-subheading text-muted">ASSURMER - Refonte de l'infrastructure systèmes - 21/02/2021</h3>
+            </div>
+         
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Jusqu'à présent, nos services étaient gérés et sous-traités par une ESN. Nous allons construire notre propre infrastructure et proposer les services nécéssaire à notre organisation. Celle-ci comprendra un certain nombre de services : serveurs Broker, RDS, AD, SNMP, DNS, DHCP, WSUS, WDS. Nous crérons différents VLAN, affecterons les ACL, puis configurons notre parefeu afin d'établir les règles entre notre DMZ, le LAN et le WAN.</p></div>
+            <h3>La topologie en question :</h3>
+              </div>
+              <img src="image/infra.png" height="650px">
+        </div>
+
+        
+    </br>
+
+        <div class="container">
+            
+            <div class="accordion">
+              <dl>
+                <dt><a href="#" class="accordionTitle">PROXMOX, Choix de notre hyperviseur</a></dt>
+                <dd class="accordionItem accordionItemCollapsed">
+                  <img src="image/proxmox.png" height="200px" />
+                 <p> 
+                  Proxmox est une plate-forme de virtualisation de serveur, basé sur Debian GNU/Linux et utilise un noyau Linux. Le code source de Proxmox est publié sous la licence publique générale GNU Affero v3, ce qui signifie la possibilité d’utiliser le logiciel, d’inspecter le code source ainsi que de contribuer au projet. La licence est dite “libre” et “contaminante”. 
+                 </br>La plateforme Proxmox est livrée sans coût de licence, offre un accès complet à toutes les fonctionnalités et augmente la flexibilité, la sécurité et la fiabilité de votre infrastructure informatique.
+                </br></p>
+                <img src="image/hyperviseur.png" height="300px" />
+                <p>Un hyperviseur est une machine permettant de faire cohabiter plusieurs machines virtuelles. Il existe deux types d'hyperviseur, le type 1 "barre métal" s'exécute directement sur la machine physique. L'hyperviseur de type 2 est un logiciel qui s'applique sur un OS distinct.
+                </p>
+                </dd>
+                <dt><a class="accordionTitle" href="#">Présentation et avantages de la virtualisation</a></dt>
+                <dd class="accordionItem accordionItemCollapsed">   
+                  <p>La virtualisation s'appuie sur une couche logicielle pour simuler des fonctionnalités et créer un système informatique virtuel. Il permet de faire fonctionner sur une machine physique plusieurs systèmes d'exploitations ou applications de manière indépendante.
+                  </p>
+                  <img src="image/shemavirtualisation.jpg" height="300px" />
+                </br></br>
+                  <h3>Les avantages :</h3>
+                  <ul>
+                    <li>L'efficacité : il permet d'héberger un nombre important de systèmes d'exploitation sur la même machine. Réduisant le nombre de machines nécessaire coté serveur, permettant un gain de place, des coûts allégés, et une réduction énergétique. Il permet également de fournir les puissances de calcul et de stockage à la demande.
+                    </li>
+                    <li>La disponibilité : la migration de machines virtuelles est grandement simplifiée, la possibilité d’effectuer des sauvegardes via snapshots facilitants les maintenances et interventions.
+                    </li>
+                    <li>La fiabilité : la virtualisation garantie une non obsolescence.
+                    </li>
+                    <li>La stratégie : la mise en production ainsi que le LAB (environnement de test) sont facilités. Cela permet également de réduire les frais de livraisons et une gestion simplifiée, notamment via l'accès à distance.
+                    </li>
+                  </ul>
+                  <p>Cependant, la centralisation que permet la virtualisation entraine une augmentation des risques informatiques. Il ne faut pas négliger l'aspect critique de la virtualisation, notamment en cas panne ou d'attaque.</p>
+                </dd>
+                <dt><a href="#" class="accordionTitle">Comparaison de différentes solutions (Proxmox - HyperV - ESXi)</a></dt>
+                <dd class="accordionItem accordionItemCollapsed">
+                </br>
+                  <img src="image/hyperviseurcomparaison.PNG" height="200px" />
+                </br></br>
+                  <img src="image/tableaucomparatif.PNG" />
+                </br></br>
+                </dd>
+                <dt><a href="#" class="accordionTitle">Présentation du rôle de WSUS</a></dt>
+                <dd class="accordionItem accordionItemCollapsed">
+                 <p>WSUS est un rôle basé sur Windows server permettant de centraliser et de déployer les mises à
+                  jours de produits Microsoft sur des machines présente sur un réseau.</p>
+                  <img src="image/wsusshema.png" />
+                  <p>WSUS centralise les mises à jour voulues et nécessaire à votre parc informatique, en interne sur un serveur, permettant aux machines clientes par la suite de venir récupérer ces mises à jour via ce serveur. Le serveur pourra ainsi effectuer une seule requête par mise à jour sur les serveurs Microsoft. Évitant ainsi la surconsommation de la bande passante, par la multiplication individuelle de mises à jour par chaque machine, en passant par internet. 
+                  </p>
+                </dd>
+                <dt><a href="#" class="accordionTitle">Avantages et prérequis</a></dt>
+                <dd class="accordionItem accordionItemCollapsed"></br>
+                  <h2>Prérequis</h2>
+                 <p><ul>
+                   <li>Un serveur virtuel ou physique dédié à WDS et suffisent en terme de ressource
+                  </li>
+                  <li>Deux partitions distinctes (pour le système d'exploitation et le stockage)
+                  </li>
+                 </ul></p>
+                 <h2>Avantages</h2>
+                 <p>Il existe des failles dans chaque systèmes d’exploitations et logiciels, Les constructeurs proposent régulièrement des mises à jour afin de réduire ces vulnérabilités. Il convient donc au sein des organisations d’établir certaines stratégies en termes de mises à jour : </p>
+                 <ul>> <li>Appliquer une politique de mise à jour régulière mise en œuvre par le SI.
+                  </li>
+                  <li>Ne pas laisser les utilisateurs effectuer les mises à jour.
+                  </li>
+                </ul>
+            <p>    Un des avantages de WSUS est qu’il permet d’être certain que toutes les propositions de mises à jour proviennent du même constructeur Microsoft rendant celles-ci fiable. La pratique des mises à jour est donc un outil indispensable à la sécurisation du système d’information.</p>
+             
+                </dd>
+                <dt><a href="#" class="accordionTitle">Procédures d'installation</a></dt>
+                <dd class="accordionItem accordionItemCollapsed">
+                 <p>Ci-dessous.</p>
+                </dd>
+               
+              </dl>
+            </div>
+          </div>
+        
+        </section>
+<script>/*!
+* classie - class helper functions
+* from bonzo https://github.com/ded/bonzo
+* 
+* classie.has( elem, 'my-class' ) -> true/false
+* classie.add( elem, 'my-new-class' )
+* classie.remove( elem, 'my-unwanted-class' )
+* classie.toggle( elem, 'my-class' )
+*/
+
+/*jshint browser: true, strict: true, undef: true */
+/*global define: false */
+
+( function( window ) {
+
+'use strict';
+
+// class helper functions from bonzo https://github.com/ded/bonzo
+
+function classReg( className ) {
+ return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
+}
+
+// classList support for class management
+// altho to be fair, the api sucks because it won't accept multiple classes at once
+var hasClass, addClass, removeClass;
+
+if ( 'classList' in document.documentElement ) {
+ hasClass = function( elem, c ) {
+   return elem.classList.contains( c );
+ };
+ addClass = function( elem, c ) {
+   elem.classList.add( c );
+ };
+ removeClass = function( elem, c ) {
+   elem.classList.remove( c );
+ };
+}
+else {
+ hasClass = function( elem, c ) {
+   return classReg( c ).test( elem.className );
+ };
+ addClass = function( elem, c ) {
+   if ( !hasClass( elem, c ) ) {
+     elem.className = elem.className + ' ' + c;
+   }
+ };
+ removeClass = function( elem, c ) {
+   elem.className = elem.className.replace( classReg( c ), ' ' );
+ };
+}
+
+function toggleClass( elem, c ) {
+ var fn = hasClass( elem, c ) ? removeClass : addClass;
+ fn( elem, c );
+}
+
+var classie = {
+ // full names
+ hasClass: hasClass,
+ addClass: addClass,
+ removeClass: removeClass,
+ toggleClass: toggleClass,
+ // short names
+ has: hasClass,
+ add: addClass,
+ remove: removeClass,
+ toggle: toggleClass
+};
+
+// transport
+if ( typeof define === 'function' && define.amd ) {
+ // AMD
+ define( classie );
+} else {
+ // browser global
+ window.classie = classie;
+}
+
+})( window );
+
+//fake jQuery
+var $ = function(selector){
+ return document.querySelector(selector);
+}
+var accordion = $('.accordion');
+
+
+
+
+
+//add event listener to all anchor tags with accordion title class
+accordion.addEventListener("click",function(e) {
+ e.stopPropagation();
+ e.preventDefault();
+ if(e.target && e.target.nodeName == "A") {
+   var classes = e.target.className.split(" ");
+   if(classes) {
+     for(var x = 0; x < classes.length; x++) {
+       if(classes[x] == "accordionTitle") {
+         var title = e.target;
+
+         //next element sibling needs to be tested in IE8+ for any crashing problems
+         var content = e.target.parentNode.nextElementSibling;
+         
+         //use classie to then toggle the active class which will then open and close the accordion
+        
+         classie.toggle(title, 'accordionTitleActive');
+         //this is just here to allow a custom animation to treat the content
+         if(classie.has(content, 'accordionItemCollapsed')) {
+           if(classie.has(content, 'animateOut')){
+             classie.remove(content, 'animateOut');
+           }
+           classie.add(content, 'animateIn');
+
+         }else{
+            classie.remove(content, 'animateIn');
+            classie.add(content, 'animateOut');
+         }
+         //remove or add the collapsed state
+         classie.toggle(content, 'accordionItemCollapsed');
+
+
+
+         
+       }
+     }
+   }
+   
+ }
+});</script>
+
+
+<div class="container">
+</br></br></br>
+    <embed src="documents/Mise en place d'un hyperviseur-combine.pdf" type="application/pdf"   height="1000px" width="1200">
+    </div>
+
+
+    </section>
+
+
+
+
+
+  </body>
+</br>
+  <footer></footer>
+</html>

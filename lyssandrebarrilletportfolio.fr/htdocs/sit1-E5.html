@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="style_ap.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper/swiper-bundle.min.css"
+  />
+
+    <title>Lyssandre Barrillet portefolio</title>
+
+  </head>
+
+  
+  <body>
+
+
+    <nav>
+         
+        <ul>
+          <li><a href="index.html">Accueil</a></li>
+    
+          <li><a href="index.html">Entreprise</a></li>
+          <li><a href="index.html">Projet</a></li>
+          <li><a href="index.html">Veille technologique</a></li>
+        </ul>
+      </nav>
+
+
+      <section id="2">
+      </br>  
+        <h1>Epreuve E5 - Situation 1</h1>
+        <div class="backgroundent">
+        <img src="image/camera.png" height="400px" />
+    </div>
+        
+        
+        </section>
+
+      <section class="page-section bg-light" id="team">
+        <div class="container">
+            <div class="text-center">
+                <h2 class="section-heading text-uppercase">Mise en place d'une solution de vidéo surveillance pour la société ASSURMER</h2>
+                <h3 class="section-subheading text-muted">Par Lyssandre Barrillet - 20/04/22</h3>
+            </div>
+         
+            <div class="row">
+                <div class="col-lg-8 mx-auto text-center"><p class="large text-muted">Dans le but de sécuriser l'infrastucture d'Assurmer, je vais proposer une solution de vidéo surveillance afin se prémunir contre les intrusions.</p></div>
+            </div>
+            <h3 class="section-subheading text-muted">Topologie de l'infrastructure - sous Viso</h3>
+            <embed src="documents/topologieassurmere5.pdf" type="application/pdf"   height="1000px" width="1200">
+        </div>
+
+    </br>
+
+        <div class="container">
+            
+            <div class="accordion">
+              <dl>
+                <dt><a class="accordionTitle" href="#">Plan d'adressage IP</a></dt>
+                <dd class="accordionItem accordionItemCollapsed">
+                  
+                 
+                 
+                  <embed src="documents/planadressageip.pdf" type="application/pdf"   height="1000px" width="1200">
+               
+                </dd>
+                <dt><a href="#" class="accordionTitle">Fichier de configuration Switchs et Routeurs</a></dt>
+                <dd class="accordionItem accordionItemCollapsed">
+                 <p><embed src="documents/fichiersconf.pdf" type="application/pdf"   height="1000px" width="1200"></p>
+                </dd>
+                <dt><a class="accordionTitle" href="#">Active Directory</a></dt>
+                <dd class="accordionItem accordionItemCollapsed">
+                  
+                 
+                 
+                  <embed src="documents/activedirectory.pdf" type="application/pdf"   height="1000px" width="1200">
+               
+                </dd>
+                <dt><a href="#" class="accordionTitle">Serveur Nagios</a></dt>
+                <dd class="accordionItem accordionItemCollapsed">
+                 <p><embed src="documents/serveurnagios.pdf" type="application/pdf"   height="1000px" width="1200"></p>
+                </dd>
+
+                <dt><a href="#" class="accordionTitle">Dossier de configuration NAS et caméra</a></dt>
+                <dd class="accordionItem accordionItemCollapsed">
+                 <p><embed src="documents/dossierdeconfigurationnasetcamera.pdf" type="application/pdf"   height="1000px" width="1200"></p>
+                </dd>
+
+                <dt><a href="#" class="accordionTitle">Dossier de configuration HA-Proxy et Serveur WEB</a></dt>
+                <dd class="accordionItem accordionItemCollapsed">
+                 <p><embed src="documents/dossierdeconfigurationhaproxyetserveurweb.pdf" type="application/pdf"   height="1000px" width="1200"></p>
+                </dd>
+                <dt><a href="#" class="accordionTitle">Service RDS / WSUS / GLPI</a></dt>
+                <dd class="accordionItem accordionItemCollapsed">
+                 <p><embed src="documents/servicerds.pdf" type="application/pdf"   height="1000px" width="1200"></p>
+                </dd>
+               
+              </dl>
+              
+            </div>
+          </div>
+        
+        </section>
+<script>/*!
+* classie - class helper functions
+* from bonzo https://github.com/ded/bonzo
+* 
+* classie.has( elem, 'my-class' ) -> true/false
+* classie.add( elem, 'my-new-class' )
+* classie.remove( elem, 'my-unwanted-class' )
+* classie.toggle( elem, 'my-class' )
+*/
+
+/*jshint browser: true, strict: true, undef: true */
+/*global define: false */
+
+( function( window ) {
+
+'use strict';
+
+// class helper functions from bonzo https://github.com/ded/bonzo
+
+function classReg( className ) {
+ return new RegExp("(^|\\s+)" + className + "(\\s+|$)");
+}
+
+// classList support for class management
+// altho to be fair, the api sucks because it won't accept multiple classes at once
+var hasClass, addClass, removeClass;
+
+if ( 'classList' in document.documentElement ) {
+ hasClass = function( elem, c ) {
+   return elem.classList.contains( c );
+ };
+ addClass = function( elem, c ) {
+   elem.classList.add( c );
+ };
+ removeClass = function( elem, c ) {
+   elem.classList.remove( c );
+ };
+}
+else {
+ hasClass = function( elem, c ) {
+   return classReg( c ).test( elem.className );
+ };
+ addClass = function( elem, c ) {
+   if ( !hasClass( elem, c ) ) {
+     elem.className = elem.className + ' ' + c;
+   }
+ };
+ removeClass = function( elem, c ) {
+   elem.className = elem.className.replace( classReg( c ), ' ' );
+ };
+}
+
+function toggleClass( elem, c ) {
+ var fn = hasClass( elem, c ) ? removeClass : addClass;
+ fn( elem, c );
+}
+
+var classie = {
+ // full names
+ hasClass: hasClass,
+ addClass: addClass,
+ removeClass: removeClass,
+ toggleClass: toggleClass,
+ // short names
+ has: hasClass,
+ add: addClass,
+ remove: removeClass,
+ toggle: toggleClass
+};
+
+// transport
+if ( typeof define === 'function' && define.amd ) {
+ // AMD
+ define( classie );
+} else {
+ // browser global
+ window.classie = classie;
+}
+
+})( window );
+
+//fake jQuery
+var $ = function(selector){
+ return document.querySelector(selector);
+}
+var accordion = $('.accordion');
+
+
+
+
+
+//add event listener to all anchor tags with accordion title class
+accordion.addEventListener("click",function(e) {
+ e.stopPropagation();
+ e.preventDefault();
+ if(e.target && e.target.nodeName == "A") {
+   var classes = e.target.className.split(" ");
+   if(classes) {
+     for(var x = 0; x < classes.length; x++) {
+       if(classes[x] == "accordionTitle") {
+         var title = e.target;
+
+         //next element sibling needs to be tested in IE8+ for any crashing problems
+         var content = e.target.parentNode.nextElementSibling;
+         
+         //use classie to then toggle the active class which will then open and close the accordion
+        
+         classie.toggle(title, 'accordionTitleActive');
+         //this is just here to allow a custom animation to treat the content
+         if(classie.has(content, 'accordionItemCollapsed')) {
+           if(classie.has(content, 'animateOut')){
+             classie.remove(content, 'animateOut');
+           }
+           classie.add(content, 'animateIn');
+
+         }else{
+            classie.remove(content, 'animateIn');
+            classie.add(content, 'animateOut');
+         }
+         //remove or add the collapsed state
+         classie.toggle(content, 'accordionItemCollapsed');
+
+
+
+         
+       }
+     }
+   }
+   
+ }
+});</script>
+
+
+<div class="container">
+</br></br></br>
+<h2 class="section-heading text-uppercase">Fiche de réalisation</h2>
+    <embed src="documents/ficherealisation1.pdf" type="application/pdf"   height="1000px" width="1200">
+    </div>
+
+
+    </section>
+
+
+
+
+
+  </body>
+</br>
+  <footer></footer>
+</html>
